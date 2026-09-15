@@ -2,20 +2,19 @@
 
 | # | WHAT | HOW | WHY |
 |---|---|---|---|
-| 1 | I Get home after work and have to pick something to eat | Tired & Overwhelmed|   |
-| 2 |   |   |   | 
+| 1 | I Get home after work and have to pick something to eat | Tired & Overwhelmed| indecisive + Decision fatigue|
+| 2 |Not having an ingredient and having to go to the store|I dont like grocery stores and I am tired after a day|Overstimulating| 
 | 3 |   |   |   | 
 
 
 ## Q&A
 
-### 1. What
+### 1. Which Why Suprised you the most?
+I dont think any were super suprising. But I noticed they are both related to being tired at the end of the day
 
-I have trouble Picking a recipe or even type of food for dinner
+### 2. if you could only fix one of these which would change your day most
+Picking dinner whould help me the most
 
 
-### 2. How
-Annoyed and overwellmed at the end of the day.
-
-### 3. Why
-At the end of the day twords dinner I have trouble picking things because of decision fatigue and I am not good at picking in the best of times.
+### 3. Do any two rows share a similar Why?
+I think they are both similar where I am overstiumlated and tired at the end of the day and just want to recover.
