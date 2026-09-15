@@ -1,10 +1,10 @@
 # What / How / Why
 
-| # | Moment | WHAT | HOW | WHY |
-|---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
+| # | WHAT | HOW | WHY |
+|---|---|---|---|
+| 1 | I Get home after work and have to pick something to eat   |   |   |
+| 2 |   |   |   | 
+| 3 |   |   |   | 
 
 
 ## Q&A
