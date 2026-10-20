@@ -7,7 +7,7 @@ import { parseRecipeHtml, type Meal, type Recipe, type RecipeLibraryResponse } f
 import ThemeToggle from "../theme-toggle";
 
 const defaultTagColor = "#c5eee5";
-const mealTypes: Meal[] = ["Breakfast", "Lunch", "Dinner"];
+const mealTypes: Meal[] = ["Breakfast", "Lunch", "Dinner", "Dessert", "Other"];
 
 function mealTagName(tag: string | undefined): Meal | null {
   return mealTypes.find((meal) => meal.toLocaleLowerCase() === tag?.toLocaleLowerCase()) ?? null;
@@ -16,6 +16,7 @@ function mealTagName(tag: string | undefined): Meal | null {
 export default function RecipesPage() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [tagColors, setTagColors] = useState<Record<string, string>>({});
+  const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
   const [error, setError] = useState("");
@@ -24,9 +25,23 @@ export default function RecipesPage() {
   const [tagColorDrafts, setTagColorDrafts] = useState<Record<string, string>>({});
   const [savingRecipe, setSavingRecipe] = useState<string | null>(null);
   const [addingTagTo, setAddingTagTo] = useState<string | null>(null);
+  const [detailsRecipe, setDetailsRecipe] = useState<Recipe | null>(null);
   const existingTags = Array.from(new Set(
     recipes.flatMap((recipe) => recipe.tags ?? []),
   )).sort((left, right) => left.localeCompare(right));
+  const normalizedSearch = searchQuery.trim().toLocaleLowerCase();
+  const filteredRecipes = recipes.filter((recipe) =>
+    recipe.title.toLocaleLowerCase().includes(normalizedSearch),
+  );
+
+  useEffect(() => {
+    if (!detailsRecipe) return;
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setDetailsRecipe(null);
+    }
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [detailsRecipe]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -180,10 +195,6 @@ export default function RecipesPage() {
   return (
     <main className="app-shell">
       <header className="top-bar">
-        <Link className="wordmark" href="/" aria-label="Supper Club home">
-          <span className="wordmark-mark" aria-hidden="true">S</span>
-          <span>Supper Club</span>
-        </Link>
         <div className="top-actions">
           <Link className="library-status library-link" href="/" aria-label="Back to recipe picker">
             <span aria-hidden="true">←</span>
@@ -195,22 +206,35 @@ export default function RecipesPage() {
 
       <section className="recipe-library-page" aria-labelledby="recipe-library-title">
         <div className="recipe-library-heading">
-          <span className="eyebrow">YOUR RECIPE BOX</span>
           <h1 id="recipe-library-title">All recipes</h1>
           <p>
             {loading
               ? "Loading your recipes..."
-              : `${recipes.length} ${recipes.length === 1 ? "recipe" : "recipes"} in your library`}
+              : normalizedSearch
+                ? `${filteredRecipes.length} matching ${filteredRecipes.length === 1 ? "recipe" : "recipes"}`
+                : `${recipes.length} ${recipes.length === 1 ? "recipe" : "recipes"} in your library`}
           </p>
         </div>
+
+        <label className="search-field recipe-library-search">
+          <span className="search-icon" aria-hidden="true" />
+          <span className="visually-hidden">Search recipes by title</span>
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            placeholder="Search recipes..."
+          />
+        </label>
 
         {loadError ? (
           <p className="recipe-library-message" role="alert">{loadError}</p>
         ) : loading ? (
           <p className="recipe-library-message" role="status">Loading recipes...</p>
         ) : recipes.length ? (
-          <div className="recipe-library-list">
-            {recipes.map((recipe) => (
+          filteredRecipes.length ? (
+            <div className="recipe-library-list">
+              {filteredRecipes.map((recipe) => (
               <article className={`recipe-result recipe-library-card${recipe.image ? " has-image" : ""}`} key={recipe.id}>
                 {recipe.image && (
                   <Image
@@ -224,8 +248,26 @@ export default function RecipesPage() {
                 )}
                 <div className="recipe-library-card-content">
                   <div className="recipe-library-title-row">
-                    <h2>{recipe.title}</h2>
-                    {recipe.meal && <span className="meal-tag">{recipe.meal}</span>}
+                    <button
+                      className="recipe-library-title-button"
+                      type="button"
+                      onClick={() => setDetailsRecipe(recipe)}
+                    >
+                      {recipe.title}
+                    </button>
+                    {recipe.meal && (
+                      <span className="meal-tag">
+                        {recipe.meal}
+                        <button
+                          type="button"
+                          aria-label={`Remove ${recipe.meal} meal type from ${recipe.title}`}
+                          disabled={savingRecipe !== null}
+                          onClick={() => void saveMeal(recipe, null)}
+                        >
+                          ×
+                        </button>
+                      </span>
+                    )}
                   </div>
                   <div className="recipe-tags">
                     <div className="recipe-tag-list" aria-label={`Tags for ${recipe.title}`}>
@@ -351,8 +393,17 @@ export default function RecipesPage() {
                   </div>
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="empty-library recipe-library-empty">
+              <div className="empty-mark" aria-hidden="true">⌕</div>
+              <div>
+                <h2>No recipes found</h2>
+                <p>Try another search term.</p>
+              </div>
+            </div>
+          )
         ) : (
           <div className="empty-library recipe-library-empty">
             <div className="empty-mark" aria-hidden="true">↘</div>
@@ -364,6 +415,59 @@ export default function RecipesPage() {
         )}
         {error && !loading && <p className="recipe-library-message" role="alert">{error}</p>}
       </section>
+
+      {detailsRecipe && (
+        <div
+          className="recipe-dialog-backdrop"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setDetailsRecipe(null);
+          }}
+        >
+          <section
+            className="recipe-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="library-recipe-dialog-title"
+          >
+            <div className="recipe-dialog-header">
+              <div>
+                <span className="result-label">RECIPE DETAILS</span>
+                {detailsRecipe.meal && <span className="meal-tag">{detailsRecipe.meal}</span>}
+              </div>
+              <button
+                className="recipe-dialog-close"
+                type="button"
+                aria-label="Close recipe"
+                onClick={() => setDetailsRecipe(null)}
+              >
+                ×
+              </button>
+            </div>
+            <h2 id="library-recipe-dialog-title">{detailsRecipe.title}</h2>
+            <p className="recipe-source">From {detailsRecipe.source}</p>
+            {detailsRecipe.ingredients.length > 0 && (
+              <div className="result-section">
+                <h3>Ingredients</h3>
+                <ul>
+                  {detailsRecipe.ingredients.map((ingredient, index) => (
+                    <li key={`${detailsRecipe.id}-ingredient-${index}`}>{ingredient}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {detailsRecipe.instructions.length > 0 && (
+              <div className="result-section directions">
+                <h3>Instructions</h3>
+                <ol>
+                  {detailsRecipe.instructions.map((instruction, index) => (
+                    <li key={`${detailsRecipe.id}-instruction-${index}`}>{instruction}</li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
     </main>
   );
 }

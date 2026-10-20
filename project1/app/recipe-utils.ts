@@ -1,4 +1,4 @@
-export type Meal = "Breakfast" | "Lunch" | "Dinner";
+export type Meal = "Breakfast" | "Lunch" | "Dinner" | "Dessert" | "Other";
 
 export type Recipe = {
   id: string;

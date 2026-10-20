@@ -1,12 +1,51 @@
 {
-  "Butternut Squash Ravioli.html": [
-    "dinner"
-  ],
-  "Chilaquiles Brunch Casserole.html": [
-    "dinner"
-  ],
+  "Butternut Squash Ravioli.html": [],
+  "Chilaquiles Brunch Casserole.html": [],
   "_tagColors": {
     "test": "#ff2600",
-    "dinner": "#c5eee5"
-  }
+    "dinner": "#c5eee5",
+    "snack": "#c5eee5",
+    "Eggs": "#c5eee5",
+    "WOW": "#c5eee5",
+    "diner": "#c5eee5"
+  },
+  "Chilaquiles.html": [],
+  "_mealByFile": {
+    "Crispy Crunchy Roasted Chickpeas.html": "Other",
+    "Easy 1-Pot Vegetable Broth.html": "Other",
+    "Chilaquiles.html": "Dinner",
+    "Focaccia Sandwiches for a Crowd.html": "Lunch",
+    "Rhubarb Pie (NYT).html": "Dessert",
+    "Sesame Tofu with Broccoli.html": "Dinner",
+    "The Most Basic Dal.html": "Dinner",
+    "Tofu Ground Beef.html": "Other",
+    "Toor Dal (pressure Cooker).html": "Dinner",
+    "Vegetarian Kimchi.html": "Other",
+    "Butternut Squash Ravioli.html": "Dinner",
+    "Easy Greek Spinach Pie.html": "Lunch",
+    "Hummus.html": "Lunch",
+    "Pesto Beans.html": "Dinner",
+    "Pickled Banana Peppers (FIXED To Not Be Gross).html": "Other",
+    "Crustless Quiche.html": "Breakfast",
+    "Mom Simple Tomato Sauce.html": "Dinner"
+  },
+  "Crispy Crunchy Roasted Chickpeas.html": [],
+  "Easy 1-Pot Vegetable Broth.html": [],
+  "Crustless Quiche.html": [
+    "WOW"
+  ],
+  "Easy Greek Spinach Pie.html": [
+    "WOW"
+  ],
+  "Focaccia Sandwiches for a Crowd.html": [],
+  "Rhubarb Pie (NYT).html": [],
+  "Sesame Tofu with Broccoli.html": [],
+  "The Most Basic Dal.html": [],
+  "Tofu Ground Beef.html": [],
+  "Toor Dal (pressure Cooker).html": [],
+  "Vegetarian Kimchi.html": [],
+  "Hummus.html": [],
+  "Mom Simple Tomato Sauce.html": [],
+  "Pesto Beans.html": [],
+  "Pickled Banana Peppers (FIXED To Not Be Gross).html": []
 }

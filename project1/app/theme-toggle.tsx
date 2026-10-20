@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 
 const themeStorageKey = "supper-club-theme";
 const themeChangeEvent = "supper-club-theme-change";
@@ -24,10 +24,6 @@ function getServerSnapshot() {
 
 export default function ThemeToggle() {
   const darkMode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = darkMode ? "dark" : "light";
-  }, [darkMode]);
 
   function toggleTheme() {
     const nextDarkMode = !darkMode;

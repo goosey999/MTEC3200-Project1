@@ -20,9 +20,9 @@ export async function GET() {
     const meals = storedMeals && typeof storedMeals === "object" && !Array.isArray(storedMeals)
       ? Object.fromEntries(
         Object.entries(storedMeals)
-          .filter((entry): entry is [string, "Breakfast" | "Lunch" | "Dinner"] =>
+          .filter((entry): entry is [string, "Breakfast" | "Lunch" | "Dinner" | "Dessert" | "Other"] =>
             typeof entry[1] === "string"
-            && ["Breakfast", "Lunch", "Dinner"].includes(entry[1]),
+            && ["Breakfast", "Lunch", "Dinner", "Dessert", "Other"].includes(entry[1]),
           ),
       )
       : {};

@@ -24,7 +24,8 @@ export async function POST(request: Request) {
     meal?: unknown;
   };
   const validMeal = meal === undefined || meal === null
-    || meal === "Breakfast" || meal === "Lunch" || meal === "Dinner";
+    || meal === "Breakfast" || meal === "Lunch" || meal === "Dinner"
+    || meal === "Dessert" || meal === "Other";
   if (
     typeof name !== "string"
     || path.basename(name) !== name
