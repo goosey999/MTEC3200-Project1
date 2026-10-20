@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16.0px;
+                color: #34302e;
+                margin: 0.25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0.25in;
+            }
+            .name {
+                font-size: 18.0px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14.0px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14.0px;
+            }
+            .metadata {
+                font-size: 14.0px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14.0px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                
+                float: left;
+                margin-right: 14px;
+                
+                
+            }
+            .photo {
+                max-width: 140.0px;
+                max-height: 140.0px;
+                width: auto;
+                height: auto;
+            }
+            
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+        
+        <div class="photobox">
+            
+            <a href="https://static01.nyt.com/images/2023/05/12/multimedia/AH-Rubarb-pie-mqvh/AH-Rubarb-pie-mqvh-videoSixteenByNineJumbo1600.jpg">
+                <img src="Images/70078408-3D54-43D1-8222-69F2681448B2/44064646-574E-4052-BEAA-3B2FAFF14A0B.jpg" itemprop="image" class="photo photoswipe"/>
+            </a>
+            
+            
+        </div>
+        
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Rhubarb Pie (NYT)</h1>
+        
+        <!-- Info -->
+        
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="5">★★★★★</p>
+        
+            <p itemprop="recipeCategory" class="categories">August, Desserts</p>
+        
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            
+            <b>Total Time: </b><span itemprop="totalTime">1 hr 15 min</span>
+            
+            <b>Servings: </b><span itemprop="recipeYield">8 servings</span>
+            
+
+            <!-- Source -->
+            
+                <b>Source: </b>
+                
+                    <a itemprop="url" href="https://cooking.nytimes.com/recipes/9420-straight-up-rhubarb-pie">
+                        <span itemprop="author">cooking.nytimes.com</span>
+                    </a>
+                
+                
+            
+        </p>
+        
+        
+        
+        <div class="clear"></div>
+        
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredients</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient"><strong>2</strong> cups all-purpose flour</p><p class="line" itemprop="recipeIngredient"><strong>1/2</strong> teaspoon salt</p><p class="line" itemprop="recipeIngredient"><strong>2</strong> teaspoons sugar</p><p class="line" itemprop="recipeIngredient"><strong>2/3</strong> cup vegetable shortening, plus 2 tablespoons</p><p class="line" itemprop="recipeIngredient"><strong>6</strong> tablespoons ice water</p><p class="line" itemprop="recipeIngredient"><strong>5</strong> cups sliced rhubarb</p><p class="line" itemprop="recipeIngredient"><strong>1 1/4</strong> cups sugar</p><p class="line" itemprop="recipeIngredient"><strong>5</strong> tablespoons flour</p><p class="line" itemprop="recipeIngredient"><strong>1/4</strong> teaspoon cinnamon</p><p class="line" itemprop="recipeIngredient"><strong>1 1/2</strong> tablespoons butter</p>
+            </div>
+        </div>
+        
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+        
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+    
+
+    <!-- Directions -->
+    
+    <div class="directionsbox">
+        <h3 class="subhead">Directions</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">Preheat the oven to 425 degrees. Make the crust: before measuring the flour, stir it to leaven with air and then measure out 2 cups. Combine the flour, salt and sugar in a large bowl and fluff with a fork. Cut the shortening into the flour with a fork or pastry blender. Stop as soon as the sheen of the butter disappears and the mixture is a bunch of coarse pieces. Sprinkle a tablespoon of water at a time over the dough, lifting and tossing it with the fork. When it begins to come together, gather the dough, press it into a ball and then pull it apart; if it crumbles in your hands, it needs more water. (It&apos;s better to err on the side of too wet than too dry.) Add a teaspoon or two more water, as needed.</p><p class="line">Gather the dough into two slightly unequal balls, the larger one for the bottom crust and the smaller one for the top. Flatten the larger ball, reforming any frayed edges with the sides of your hand. Dust with flour and roll the dough, starting from the center and moving toward the edges. Take a knife or thin spatula and quickly work its edge between the crust and the counter top. Lift the dough to the side; dust the dough and counter top with flour. Roll again until the diameter is an inch or 2 larger than that of the pie pan. Lay the rolling pin a third of the way from one of the edges. Roll the crust onto the pin and then unroll the crust into a 9-inch pie pan and press it into place. Place in the freezer.</p><p class="line">Make the filling: in a large bowl, combine the rhubarb, sugar, flour and cinnamon. Pour into the crust-lined pie pan. Dot with butter.</p><p class="line">Roll out the top crust. Dab the rim of the bottom crust with water to create a glue. Then place the top crust over the rhubarb; trim, seal and cut several vents. Bake for 15 minutes; reduce the temperature to 350 degrees and bake 25 to 30 minutes more, or until a bit of pink juice bubbles from the vents in the crust.</p>
+        </div>
+    </div>
+    
+
+    <!-- Notes -->
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+    
+        <!-- Used in two different places depending on the recipe layout -->
+
+
+<div class="nutritionbox textbox">
+    <h3 class="subhead">Nutrition</h3>
+    <div itemprop="nutrition" class="nutrition text">
+        <p>Trans Fat: 3 grams<br/>Fat: 23 grams<br/>Calories: 471<br/>Saturated Fat: 7 grams<br/>Unsaturated Fat: 15 grams<br/>Sodium: 151 milligrams<br/>Sugar: 33 grams<br/>Fiber: 2 grams<br/>Carbohydrate: 63 grams<br/>Protein: 4 grams</p>
+    </div>
+</div>
+
+
+
+    
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+
+
+    </body>
+</html>

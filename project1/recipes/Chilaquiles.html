@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16.0px;
+                color: #34302e;
+                margin: 0.25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0.25in;
+            }
+            .name {
+                font-size: 18.0px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14.0px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14.0px;
+            }
+            .metadata {
+                font-size: 14.0px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14.0px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                
+                float: left;
+                margin-right: 14px;
+                
+                
+            }
+            .photo {
+                max-width: 140.0px;
+                max-height: 140.0px;
+                width: auto;
+                height: auto;
+            }
+            
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+        
+        <div class="photobox">
+            
+            <a href="https://www.simplyrecipes.com/wp-content/uploads/2008/11/chilaquiles-rojos-horiz-a-1600-200x133.jpg">
+                <img src="Images/FE6B48CF-7643-40F6-9144-5C334DB4C0B6-54773-0000217CE9F05D44/CE09BEF2-CAD7-458A-9B82-5DD15632A300-54773-0000217DC073A88A.jpg" itemprop="image" class="photo photoswipe"/>
+            </a>
+            
+            
+        </div>
+        
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Chilaquiles</h1>
+        
+        <!-- Info -->
+        
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+        
+            <p itemprop="recipeCategory" class="categories">August</p>
+        
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            
+            <b>Cook Time: </b><span itemprop="cookTime">15 minutes</span>
+            
+            <b>Servings: </b><span itemprop="recipeYield">Serves 4</span>
+            
+
+            <!-- Source -->
+            
+                <b>Source: </b>
+                
+                    <a itemprop="url" href="https://www.simplyrecipes.com/recipes/chilaquiles/">
+                        <span itemprop="author">simplyrecipes.com</span>
+                    </a>
+                
+                
+            
+        </p>
+        
+        
+        
+        <div class="clear"></div>
+        
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredients</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient"><strong>1</strong> dozen corn tortillas, preferably stale, or left out overnight to dry out a bit, quartered or cut into 6 wedges</p><p class="line" itemprop="recipeIngredient">Corn oil</p><p class="line" itemprop="recipeIngredient">Salt</p><p class="line" itemprop="recipeIngredient"><strong>1 1/2 to 2</strong> cups red chile sauce or salsa verde*</p><p class="line" itemprop="recipeIngredient">A few sprigs of epazote (optional)</p><p class="line" itemprop="recipeIngredient">Cotija cheese or queso fresco</p><p class="line" itemprop="recipeIngredient">Crema Mexicana or creme fraiche</p><p class="line" itemprop="recipeIngredient">Cilantro, chopped</p><p class="line" itemprop="recipeIngredient">Chopped red onion</p><p class="line" itemprop="recipeIngredient">Avocado, sliced or roughly chopped</p><p class="line" itemprop="recipeIngredient">*Red chili sauce</p><p class="line" itemprop="recipeIngredient">*Salsa verde</p>
+            </div>
+        </div>
+        
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+        
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+    
+
+    <!-- Directions -->
+    
+    <div class="directionsbox">
+        <h3 class="subhead">Directions</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">Take 4 dried ancho chiles, remove seeds, stems, and veins. Heat chiles lightly on a skillet on medium heat to draw out their flavor. Put chilies in a saucepan, pour boiling hot water over to cover. Let sit for 15 minutes. Add chiles, 2 garlic cloves, 1/2 teaspoon of salt, 1 1/2 cups of chili soaking liquid to a blender. Hold down lid of blender tightly while blending, blend until completely puréed. Strain through a mesh sieve into a frying pan to make the chilaquiles. (Red chile sauce recipe)</p><p class="line">Put 1 lb tomatillos, husks removed, into a saucepan, cover with water by an inch. Add 1 jalapeno, stems and seeds removed. Add 2 cloves garlic. Bring to a boil. Cook for 5 minutes until tomatillos have changed color and are cooked through. Use slotted spoon to remove tomatillos, jalapeno and garlic to a blender. Add a cup of the cooking liquid. Blend until completely puréed. Add salt to taste. (Salsa verde recipe)</p><p class="line">1 Fry the tortillas: In a large sauté pan, coat pan generously with corn oil, (1/8 inch), heat on medium high to high. When the oil is quite hot, add the tortillas, fry until golden brown.</p><p class="line">Remove tortillas to a paper towel lined plate to soak up excess oil. Sprinkle a little salt on the tortillas.</p><p class="line">Wipe pan clean of any browned bits of tortillas.</p><p class="line">2 Heat the salsa: Add 2 Tbsp oil to pan, bring to high heat again. Add the salsa and let salsa cook for several minutes. If you have a few sprigs of epazote, add them to the salsa.</p><p class="line">3 Add fried tortillas to the salsa: Add the fried tortilla quarters to the salsa. Gently turn over the pieces of tortilla until they are all well coated with salsa. Let cook for a few minutes more.</p><p class="line">Remove from heat. Serve chilaquiles with garnishes and fried eggs and beans or nopalitos.</p>
+        </div>
+    </div>
+    
+
+    <!-- Notes -->
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+    
+        <!-- Used in two different places depending on the recipe layout -->
+
+
+    
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+
+
+    </body>
+</html>

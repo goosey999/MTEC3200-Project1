@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Shared styles */
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 16.0px;
+                color: #34302e;
+                margin: 0.25in;
+            }
+            @page {
+                size: letter portrait;
+                margin: 0.25in;
+            }
+            .name {
+                font-size: 18.0px;
+                font-family: Helvetica, sans-serif;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+            }
+            .categories {
+                color: #605D5D;
+                font-size: 14.0px;
+                font-family: Helvetica, sans-serif;
+                font-style: italic;
+            }
+            .rating {
+                color: #d10505;
+                font-size: 14.0px;
+            }
+            .metadata {
+                font-size: 14.0px;
+            }
+            .infobox p {
+                margin: 0;
+                line-height: 150%;
+            }
+            .subhead {
+                color: #d10505;
+                font-weight: bold;
+                font-size: 14.0px;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+            
+            .ingredients p {
+                margin: 4px 0;
+            }
+            /* To prevent nutrition/directions from getting too close
+               to ingredients */
+            .ingredients {
+                padding-bottom: 10px;
+            }
+            .clear {
+                clear:both;
+            }
+            a {
+                color: #4990E2;
+                text-decoration: none;
+            }
+            /* Full page specific styles */
+            .text {
+                line-height: 130%;
+            }
+            .photobox {
+                
+                float: left;
+                margin-right: 14px;
+                
+                
+            }
+            .photo {
+                max-width: 140.0px;
+                max-height: 140.0px;
+                width: auto;
+                height: auto;
+            }
+            
+            .inline-image {
+                max-width: 25%;
+                max-height: 25%;
+                width: auto;
+                height: auto;
+            }
+            .photoswipe {
+                border: 1px #dddddd solid;
+                cursor: pointer;
+            }
+            .pswp__caption__center {
+                text-align: center !important;
+            }
+            .recipe {
+                
+                page-break-after: always;
+                
+                
+            }
+            .recipe:first-child {
+                border-top: 0 none;
+                margin-top: 0;
+                padding-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Recipe -->
+<div class="recipe" itemscope itemtype="http://schema.org/Recipe" >
+    
+    <div class="infobox">
+
+        <!-- Image -->
+        
+        <div class="photobox">
+            
+            <a href="https://i2.wp.com/smittenkitchen.com/wp-content/uploads//2018/05/chilaquiles-brunch-casserole.jpg?fit=750%2C500&ssl=1">
+                <img src="Images/4A051756-0E88-47CA-ABC1-146E5E05F55D/B4C98DF3-C72D-41ED-A940-A1E9F1E47990.jpg" itemprop="image" class="photo photoswipe"/>
+            </a>
+            
+            
+        </div>
+        
+
+        <!-- Name -->
+        <h1 itemprop="name" class="name">Chilaquiles Brunch Casserole</h1>
+        
+        <!-- Info -->
+        
+        
+        <!-- Rating, categories -->
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
+        
+            <p itemprop="recipeCategory" class="categories">August</p>
+        
+        
+        <p class="metadata">
+        
+            <!-- Cook time, prep time, servings, difficulty -->
+            
+            <b>Cook Time: </b><span itemprop="cookTime">1 hour</span>
+            
+            <b>Servings: </b><span itemprop="recipeYield">Servings: 8</span>
+            
+
+            <!-- Source -->
+            
+                <b>Source: </b>
+                
+                    <a itemprop="url" href="https://smittenkitchen.com/2018/05/chilaquiles-brunch-casserole/">
+                        <span itemprop="author">smittenkitchen.com</span>
+                    </a>
+                
+                
+            
+        </p>
+        
+        
+        
+        <div class="clear"></div>
+        
+
+    </div>
+    
+    <div class="left-column">
+
+        <!-- Ingredients -->
+        
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredients</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient"><strong>12</strong> small (6-inch) corn tortillas, quartered and fried until crisp</p><p class="line" itemprop="recipeIngredient"><strong>1 1/4</strong> cups (from a 10-ounce can) red enchilada sauce [see Note]</p><p class="line" itemprop="recipeIngredient"><strong>1 3/4</strong> cups (from a 15-ounce can) black beans, drained and rinsed</p><p class="line" itemprop="recipeIngredient"><strong>2</strong> cups (8 ounces) coarsely grated shredded monterey jack or cheddar cheese (I used a mix)</p><p class="line" itemprop="recipeIngredient"><strong>6 to 8</strong> large eggs</p><p class="line" itemprop="recipeIngredient">Kosher salt and freshly ground black pepper</p><p class="line" itemprop="recipeIngredient">Thinly sliced scallions, sour cream, diced avocado, and hot sauce, to finish and serve</p>
+            </div>
+        </div>
+        
+        
+        <!-- Nutrition (in two-column mode it goes below the ingredients) -->
+        
+
+    </div>
+    
+    <div class="right-column">
+    
+    <!-- Description -->
+    
+
+    <!-- Directions -->
+    
+    <div class="directionsbox">
+        <h3 class="subhead">Directions</h3>
+        <div itemprop="recipeInstructions" class="directions text">
+            <p class="line">Heat oven to 375°F.</p><p class="line">Coat a 3-quart baking dish (mine was 7.5-x-11.5 inches) with oil or a nonstick spray. Spread 1/4 of tortillas in bottom of dish. Drizzle/scatter with 1/4 (eyeballing it) of enchilada sauce, followed by black beans and cheese. Repeat 3 times. Bake for 15 minutes, until cheese is melted and tortillas have softened a little. Remove from oven to a cooling rack (leaving oven on) and use a spoon or fork to push little nests into the tortillas where you’d like each egg to go (it won’t fully hold it, but will help them stay in place). Crack 6 to 8 eggs into them, however many you’d like to use, season the eggs with salt and pepper and return casserole to the oven until the whites of the eggs are opaque but not fully set.</p><p class="line">[“What? Deb, that’s gross!” you’re thinking right now but trust me, I’ve made dozens of baked egg casseroles and they all end up with hard-cooked yolks. Letting the whites finish cooking in the residual heat is the only way to avoid it. If you take it out when the whites are set, the residual heat will solidify the yolks.]</p><p class="line">Remove from oven and let rest on a rack for (about) 4 to 8 minutes, after which the whites should be fully set but the yolks still runny and serve with finishes of your choice.</p>
+        </div>
+    </div>
+    
+
+    <!-- Notes -->
+    
+
+    <!-- Nutrition (in regular mode it goes below the notes) -->
+    
+        <!-- Used in two different places depending on the recipe layout -->
+
+
+    
+    
+    </div>
+    
+    <div class="clear"></div>
+
+</div>
+
+
+
+
+
+    </body>
+</html>
